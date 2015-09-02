@@ -763,8 +763,14 @@ local function test()
 	local config = require(string.format("./data/%s", _gGobalDefine.OutFileName))
 	local data = config.init("./","data/data.pack")
 	
-	for k, v in pairs(data.monster) do
+	print(table.getn(data.drop[504021700].drop_data))
+	for k, v in pairs(data.drop[504021700].drop_data) do
 		dumpData(k, v, 1)
+	end
+	
+	print(table.getn(data.monster[1].groupposition))
+	for k , v in pairs(data.monster[1].groupposition) do
+		dumpData(k, v.array, 1)
 	end
 end
 test()

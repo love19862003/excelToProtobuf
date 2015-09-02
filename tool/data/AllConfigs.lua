@@ -1,6 +1,6 @@
 --Filename:AllConfigs.lua
 --Version:  1.0
---Created time: 09/02/15 16:58:35
+--Created time: 09/02/15 17:13:59
 local configs={}
 local function registerPb(path)
 	local addr = io.open(path,"rb")
