@@ -71,25 +71,25 @@ MONSTER_TYPE_13=13
 每行第一列是自定义枚举Monster.MonsterType 代表Monster表定义一个MonsterType枚举。MONSTER_TYPE_1=1代表枚举值。 枚举注释也可以打进文件。
 
 monster.xls 名字为monster的sheet定义
-MonsterId	Name	Type	                  Position	                        GroupPosition
-int	string	Monster.MonsterType	  array	                              group
-1	monster1	MONSTER_TYPE_1	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-2	monster2	MONSTER_TYPE_2	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-3	monster3	MONSTER_TYPE_3	      1,2,3	1,2,3;11,22,                 33;33,44,55,66,77,88,99;00
-4	monster4	MONSTER_TYPE_4	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-5	monster5	MONSTER_TYPE_5	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-6	monster6	MONSTER_TYPE_6	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-7	monster7	MONSTER_TYPE_7	      0	                             1,2,3;11,22,33;33,44,55,66,77,88,99;00
-8	monster8	MONSTER_TYPE_8	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-9	monster9	MONSTER_TYPE_9	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-10	monster10	MONSTER_TYPE_10	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-11	monster11	MONSTER_TYPE_11	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-12	monster12	MONSTER_TYPE_12	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-13	monster13	MONSTER_TYPE_13	      	
+MonsterId	  Name	      Type	                  Position	                        GroupPosition
+int	        string	    Monster.MonsterType	  array	                              group
+1	          monster1	    MONSTER_TYPE_1	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
+2	          monster2	    MONSTER_TYPE_2	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
+3	          monster3	    MONSTER_TYPE_3	      1,2,3	1,2,3;11,22,                 33;33,44,55,66,77,88,99;00
+4	          monster4	    MONSTER_TYPE_4	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
+5	          monster5	    MONSTER_TYPE_5	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
+6	          monster6	    MONSTER_TYPE_6	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
+7	          monster7	    MONSTER_TYPE_7	      0	                                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
+8	          monster8	    MONSTER_TYPE_8	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
+9	          monster9	    MONSTER_TYPE_9	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
+10	        monster10	    MONSTER_TYPE_10	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
+11	        monster11	    MONSTER_TYPE_11	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
+12	        monster12	    MONSTER_TYPE_12	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
+13	        monster13	    MONSTER_TYPE_13	      	
 
 默认可以支持数据格式。 int  string enum array group
 Monster.MonsterType 是自定义枚举，需要在上面枚举上定义。 group对应数据结构为二维数组。对应proto的数据结构文件
-第一行是定义字段名字（可以加上注释打进proto文件），第二行定义的类型。
+第一行是定义字段名字（可以加上注释打进proto文件），第二行为定义的类型。
 
 
 
