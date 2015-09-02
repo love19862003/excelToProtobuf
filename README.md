@@ -71,25 +71,27 @@ MONSTER_TYPE_13=13
 每行第一列是自定义枚举Monster.MonsterType 代表Monster表定义一个MonsterType枚举。MONSTER_TYPE_1=1代表枚举值。 枚举注释也可以打进文件。
 
 monster.xls 名字为monster的sheet定义
-MonsterId	  Name	      Type	                  Position	                        GroupPosition
-int	        string	    Monster.MonsterType	  array	                              group
-1	          monster1	    MONSTER_TYPE_1	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-2	          monster2	    MONSTER_TYPE_2	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-3	          monster3	    MONSTER_TYPE_3	      1,2,3	1,2,3;11,22,                 33;33,44,55,66,77,88,99;00
-4	          monster4	    MONSTER_TYPE_4	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-5	          monster5	    MONSTER_TYPE_5	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-6	          monster6	    MONSTER_TYPE_6	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-7	          monster7	    MONSTER_TYPE_7	      0	                                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-8	          monster8	    MONSTER_TYPE_8	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-9	          monster9	    MONSTER_TYPE_9	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-10	        monster10	    MONSTER_TYPE_10	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-11	        monster11	    MONSTER_TYPE_11	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-12	        monster12	    MONSTER_TYPE_12	      1,2,3,4,5,6,7,8,9	                 1,2,3;11,22,33;33,44,55,66,77,88,99;00
-13	        monster13	    MONSTER_TYPE_13	      	
-
 默认可以支持数据格式。 int  string enum array group
 Monster.MonsterType 是自定义枚举，需要在上面枚举上定义。 group对应数据结构为二维数组。对应proto的数据结构文件
 第一行是定义字段名字（可以加上注释打进proto文件），第二行为定义的类型。
+
+_check.xls定义数据的检测
+ItemBase.sell	              table=ItemSell.sell_id;int=-1
+代表检测表ItemBase的sell字段。  检测的结果是ItemBase.sell的所有值必须在表ItemSell.sell_id中存在或者数值=-1都合法
+ItemBase.show 
+enum=itemBase.Item_Type.ITEM_TYPE_1,ItemBase.itemId;enum=itemBase.Item_Type.ITEM_TYPE_2,ItemBase.itemId;int=3,0;int=4,?
+ItemBase.show 字段是类型group，检测条件是group的单个array 符合 {itemBase.Item_Type.ITEM_TYPE_1， ItemBase.itemId} 
+{itemBase.Item_Type.ITEM_TYPE_2， ItemBase.itemId} {3， ?}, {4, ?}中任意一条就合法。
+具体的测试可以查看tool目录。
+执行run.bat即可打包 。
+
+tool/cpps 生成所有cpp文件
+tool/data 生成二进制数据以及lua需要的文件
+tool/excel 需要打包的表
+tool/lua 读取工具生成的lua文件
+tool/property 打包的配置
+tool/proto 生成打包的proto 以及pb文件
+
 
 
 
