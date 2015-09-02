@@ -5,17 +5,26 @@ excel data pack to protobuf
 packTool工程生成工具packtool从excel读取数据，并且生成对应的lua 数据。
 tool是打包工具工作目录。其中property目录的config.xls定义从excel读取目录的一些配置。
 config.xls第一个sheet默认是用户自定义枚举配置。每行第一列定义枚举所在的文件。第二列定义枚举定义所在的sheet
-例如  _enumDefine1.xls	enum_a
-      _enumDefine1.xls	enum_b
-      _enumDefine2.xls	enum  代表用户自定义枚举在_enumDefine1.xls的名字为enum_a和enum_b的sheet。以及_enumDefine2.xls名字为enum的sheet。
+例如 
+_enumDefine1.xls	enum_a
+_enumDefine1.xls	enum_b
+_enumDefine2.xls	enum  
+
+代表用户自定义枚举在_enumDefine1.xls的名字为enum_a和enum_b的sheet。以及_enumDefine2.xls名字为enum的sheet。
 
 config.xls第二个sheet 默认是需要打包的表。
 monster.xls	Monster
+
 monster.xls	Drop
+
 monster.xls	Monster_Other
+
 Item.xls	ItemBase
+
 Item.xls	ItemSell
+
 Item.xls	ItemShow
+
 第一列是文件名。 第二列是sheet名。 sheet名字对应打包出来的结构名字。
 
 config.xls第三个sheet 是打包生成出来的配置
@@ -32,7 +41,7 @@ _check.xls	check
 _enumDefine1.xls文件enum_a sheet
 
 Monster.MonsterType
-enum	                
+enum	  
 MONSTER_TYPE_1=1	    
 MONSTER_TYPE_2=2	    
 MONSTER_TYPE_3=3
