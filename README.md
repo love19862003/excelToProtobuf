@@ -43,17 +43,29 @@ _enumDefine1.xls文件enum_a sheet
 Monster.MonsterType
 enum	  
 MONSTER_TYPE_1=1	    
+
 MONSTER_TYPE_2=2	    
+
 MONSTER_TYPE_3=3
+
 MONSTER_TYPE_4=4	
+
 MONSTER_TYPE_5=5	
+
 MONSTER_TYPE_6=6	
+
 MONSTER_TYPE_7=7	
+
 MONSTER_TYPE_8=8	
+
 MONSTER_TYPE_9=9	
+
 MONSTER_TYPE_10=10	
+
 MONSTER_TYPE_11=11	
+
 MONSTER_TYPE_12=12	
+
 MONSTER_TYPE_13=13
 
 每行第一列是自定义枚举Monster.MonsterType 代表Monster表定义一个MonsterType枚举。MONSTER_TYPE_1=1代表枚举值。 枚举注释也可以打进文件。
