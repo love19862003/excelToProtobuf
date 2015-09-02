@@ -76,10 +76,15 @@ Monster.MonsterType 是自定义枚举，需要在上面枚举上定义。 group
 第一行是定义字段名字（可以加上注释打进proto文件），第二行为定义的类型。
 
 _check.xls定义数据的检测
-ItemBase.sell	              table=ItemSell.sell_id;int=-1
+ItemBase.sell	    
+table=ItemSell.sell_id;int=-1
+
 代表检测表ItemBase的sell字段。  检测的结果是ItemBase.sell的所有值必须在表ItemSell.sell_id中存在或者数值=-1都合法
+
 ItemBase.show 
+
 enum=itemBase.Item_Type.ITEM_TYPE_1,ItemBase.itemId;enum=itemBase.Item_Type.ITEM_TYPE_2,ItemBase.itemId;int=3,0;int=4,?
+
 ItemBase.show 字段是类型group，检测条件是group的单个array 符合 {itemBase.Item_Type.ITEM_TYPE_1， ItemBase.itemId} 
 {itemBase.Item_Type.ITEM_TYPE_2， ItemBase.itemId} {3， ?}, {4, ?}中任意一条就合法。
 具体的测试可以查看tool目录。
