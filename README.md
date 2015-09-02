@@ -31,11 +31,11 @@ _check.xls	check
 
 _enumDefine1.xls文件enum_a sheet
 
-Monster.MonsterType	Drop.DROP_TYPE_DEFINE
-enum	                  enum
-MONSTER_TYPE_1=1	      RANDOM_DROP=1
-MONSTER_TYPE_2=2	      FIX_DROP=2
-MONSTER_TYPE_3=3	
+Monster.MonsterType
+enum	                
+MONSTER_TYPE_1=1	    
+MONSTER_TYPE_2=2	    
+MONSTER_TYPE_3=3
 MONSTER_TYPE_4=4	
 MONSTER_TYPE_5=5	
 MONSTER_TYPE_6=6	
