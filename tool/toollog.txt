@@ -1,0 +1,21 @@
+table
+setting
+checking
+load enum path file.//excel//_enumDefine1.xls
+add enum:Monster.MonsterType
+add enum:Drop.DROP_TYPE_DEFINE
+add enum:Monster_Other.enumTest
+load enum path file.//excel//_enumDefine2.xls
+add enum:Drop.DROP_DATA_TYPE
+add enum:ItemBase.ITEM_TYPE
+load record path file.//excel//Item.xls
+add table ItemBase
+add table ItemSell
+add table ItemShow
+load record path file.//excel//monster.xls
+add table Monster
+add table Drop
+add table Monster_Other
+load record path file.//excel//_check.xls
+add check filed with table:itembase with filed:sell
+add check filed with table:itembase with filed:show
